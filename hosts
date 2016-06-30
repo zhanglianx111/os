@@ -23,7 +23,7 @@ use_cluster_metrics=true
 # For enterprise deployment types we ensure that registry.access.redhat.com is
 # included if you do not include it
 #cli_docker_additional_registries=registry.cloud.klimczakowie.pl
-#cli_docker_insecure_registries=registry.cloud.klimczakowie.pl
+cli_docker_insecure_registries=hub.hcpaas.com
 #cli_docker_blocked_registries=registry.hacker.com
 
 # Alternate image format string. If you're not modifying the format string and
@@ -37,7 +37,7 @@ use_cluster_metrics=true
 #openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/htpasswd'}]
 
 # LDAP auth
-openshift_master_identity_providers=[{'name': 'my_ldap_provider', 'challenge': 'true', 'login': 'true', 'kind': 'LDAPPasswordIdentityProvider', 'attributes': {'id': ['dn'], 'email': ['mail'], 'name': ['cn'], 'preferredUsername': ['cn']}, 'bindDN': '', 'bindPassword': '', 'ca': '', 'insecure': 'true', 'url': 'ldap://10.70.77.41:389/ou=users,dc=hcpaas,dc=com?cn'}]
+openshift_master_identity_providers=[{'name': 'hcpaas_ldap_provider', 'challenge': 'true', 'login': 'true', 'kind': 'LDAPPasswordIdentityProvider', 'attributes': {'id': ['dn'], 'email': ['mail'], 'name': ['cn'], 'preferredUsername': ['cn']}, 'bindDN': '', 'bindPassword': '', 'ca': '', 'insecure': 'true', 'url': 'ldap://10.70.77.41:389/ou=users,dc=hcpaas,dc=com?cn'}]
 
 # Configure Fluentd
 use_fluentd=true
