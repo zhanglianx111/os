@@ -1,0 +1,10 @@
+[OSEv3:children]
+nodes
+
+[OSEv3:vars]
+ansible_ssh_user=root
+deployment_type=origin
+
+[nodes]
+10.70.77.83 openshift_node_labels="{'region': 'primary', 'zone': 'east'}"
+10.70.77.84 openshift_node_labels="{'region': 'primary', 'zone': 'east'}"
