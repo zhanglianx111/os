@@ -73,7 +73,7 @@ use_fluentd=true
 #osm_controller_lease_ttl=30
 
 # default subdomain to use for exposed routes
-openshift_master_default_subdomain=apps.test.example.com
+openshift_master_default_subdomain=example.com
 
 # additional cors origins
 #osm_custom_cors_origins=['foo.cloud.klimczakowie.pl', 'bar.cloud.klimczakowie.pl']
@@ -82,8 +82,8 @@ openshift_master_default_subdomain=apps.test.example.com
 #osm_default_node_selector='region=primary'
 
 # default selectors for router and registry services
- openshift_router_selector='region=infra'
- openshift_registry_selector='region=infra'
+ openshift_router_selector='region=Cent7CTS105621'
+ openshift_registry_selector='region=Cent7CTS105621'
 
 
 # default storage plugin dependencies to install, by default the ceph and
@@ -148,8 +148,8 @@ openshift_master_default_subdomain=apps.test.example.com
 10.70.77.37
 
 [nodes]
-10.70.77.37 openshift_node_labels="{'region': 'infra', 'zone':'default'}" openshift_scheduleable=true
-10.70.77.38 openshift_node_labels="{'region': 'primary', 'zone': 'east'}"
+10.70.77.37 openshift_node_labels="{'region': 'Cent7CTS105621', 'zone':'default'}" openshift_scheduleable=true openshift_node_kubelet_args={'max-pods': ['10'], 'resolv-conf': ['/etc/resolv.conf'], 'image-gc-low-threshold': ['80'], 'image-gc-high-threshold': ['90']}
+10.70.77.38 openshift_node_labels="{'region': 'Cent7CTS105622', 'zone': 'east'}" openshift_node_kubelet_args={'max-pods': ['20'], 'resolv-conf': ['/etc/resolv.conf'], 'image-gc-low-threshold': ['80'], 'image-gc-high-threshold': ['90']}
 
 [etcds]
 10.70.77.37
