@@ -148,8 +148,8 @@ openshift_master_default_subdomain=example.com
 10.70.77.37
 
 [nodes]
-10.70.77.37 openshift_node_labels="{'region': 'Cent7CTS105621', 'zone':'default'}" openshift_scheduleable=true openshift_node_kubelet_args="{'max-pods': ['10'], 'resolv-conf': ['/etc/resolv.conf'], 'image-gc-low-threshold': ['80'], 'image-gc-high-threshold': ['90'], 'minimum-container-ttl-duration': ['10s'], 'maximum-dead-containers-per-container': ['2'], 'maximum-dead-containers': ['20']}"
-10.70.77.38 openshift_node_labels="{'region': 'Cent7CTS105622', 'zone': 'east'}" openshift_node_kubelet_args="{'max-pods': ['20'], 'resolv-conf': ['/etc/resolv.conf'], 'image-gc-low-threshold': ['80'], 'image-gc-high-threshold': ['90'], 'minimum-container-ttl-duration': ['10s'], 'maximum-dead-containers-per-container': ['2'], 'maximum-dead-containers': ['20']}"
+10.70.77.37 openshift_node_labels="{'region': 'Cent7CTS105621', 'zone':'default'}" openshift_scheduleable=true openshift_node_kubelet_args="{'max-pods': ['10'], 'resolv-conf': ['/etc/resolv.conf'], 'image-gc-low-threshold': ['80'], 'image-gc-high-threshold': ['90'], 'minimum-container-ttl-duration': ['10s'], 'maximum-dead-containers-per-container': ['2'], 'maximum-dead-containers': ['20'], 'kube-reserved': ['200m'], 'system-reserved': ['30G']}"
+10.70.77.38 openshift_node_labels="{'region': 'Cent7CTS105622', 'zone': 'east'}" openshift_node_kubelet_args="{'max-pods': ['20'], 'resolv-conf': ['/etc/resolv.conf'], 'image-gc-low-threshold': ['80'], 'image-gc-high-threshold': ['90'], 'minimum-container-ttl-duration': ['10s'], 'maximum-dead-containers-per-container': ['2'], 'maximum-dead-containers': ['20'], 'kube-reserved': ['200m'], 'system-reserved': ['30G']}"
 
 [etcds]
 10.70.77.37
